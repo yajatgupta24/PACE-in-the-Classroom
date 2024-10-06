@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
-import satelitImg from "../../assets/application.gif";
+import satelitImg from "../../assets/Application.gif";
 
 const Rapidscat = () => {
   return (
