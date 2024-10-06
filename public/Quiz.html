@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PACE Quiz</title>
+    <h1 style="color:rgb(202, 223, 224);text-align: center;">Test your Knowledge with PACE!!!</h1>
+    <h1 style="color:rgb(3, 241, 31);text-align: center;">Quiz</h1>
+
+
+    <style>
+
+        .main_box{
+            border:0.5px solid black;
+            margin-top: 50px !important;
+           
+        }
+        .main_box:hover{
+            border:0px solid;
+            box-shadow: 0px 2px 7px rgb(227, 6, 6);
+        }
+        .container{
+            box-shadow: 0px 0px 7px white;
+            margin:12px;
+            padding:15px;
+            border-radius: 10px;
+            background-color: none;
+        }
+        .question{
+            border:1px solid;
+            font-size:large;
+            background-color: rgb(39, 39, 39);
+            color: white;
+            box-shadow: inset 0px 0px 5px rgb(0, 0, 0);
+        }
+
+        .hidden{
+            position: absolute;
+            visibility: hidden;
+        }
+        .opt{
+            border-radius: 10px;
+            margin: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body background="./src/assets/quiz.gif",background-size: cover, text color: red>
+    <div class="container main_box">
+        <div class="container question">
+            1) What does the acronym "PACE" stand for?
+        </div>
+        <div class="container options" style="color:rgb(3, 233, 241);">
+            <label for="Q1A"><div id="OPTQ1A" class="opt"><input type="radio" name="Q1" id="Q1A" value="A" onchange="fun(document.getElementById('OPTQ1A'),'A',document.getElementById('ANSQ1').textContent)"> Planet, Atmosphere, Cloud, Earth</div></label>
+            <label for="Q1B"><div id="OPTQ1B" class="opt"><input type="radio" name="Q1" id="Q1B" value="B" onchange="fun(document.getElementById('OPTQ1B'),'B',document.getElementById('ANSQ1').textContent)"> Planetary Atmospheric Cloud Examination</div></label>
+            <label for="Q1C"><div id="OPTQ1C" class="opt"><input type="radio" name="Q1" id="Q1C" value="C" onchange="fun(document.getElementById('OPTQ1C'),'C',document.getElementById('ANSQ1').textContent)"> Plankton, Aerosol, Cloud, ocean Ecosystem</div></label>
+            <label for="Q1D"><div id="OPTQ1D" class="opt"><input type="radio" name="Q1" id="Q1D" value="D" onchange="fun(document.getElementById('OPTQ1D'),'D',document.getElementById('ANSQ1').textContent)"> Plankton, Air Composition, Earth</div></label>
+        </div>
+        <span class="hidden" id="ANSQ1">C</span>
+    </div>
+    <div class="container main_box";>
+        <div class="container question">
+            2) What is the primary goal of the PACE mission?
+        </div>
+        <div class="container options" style="color:rgb(3, 233, 241);">
+            <label for="Q2A"><div id="OPTQ2A" class="opt"><input type="radio" name="Q2" id="Q2A" value="A" onchange="fun(document.getElementById('OPTQ2A'),'A',document.getElementById('ANSQ2').textContent)"> To monitor ocean health, air quality, and climate</div></label>
+            <label for="Q2B"><div id="OPTQ2B" class="opt"><input type="radio" name="Q2" id="Q2B" value="B" onchange="fun(document.getElementById('OPTQ2B'),'B',document.getElementById('ANSQ2').textContent)"> To monitor water level on Earth</div></label>
+            <label for="Q2C"><div id="OPTQ2C" class="opt"><input type="radio" name="Q2" id="Q2C" value="C" onchange="fun(document.getElementById('OPTQ2C'),'C',document.getElementById('ANSQ2').textContent)"> To explore the outer edges of the solar system</div></label>
+            <label for="Q2D"><div id="OPTQ2D" class="opt"><input type="radio" name="Q2" id="Q2D" value="D" onchange="fun(document.getElementById('OPTQ2D'),'D',document.getElementById('ANSQ2').textContent)"> To observe distant galaxies</div></label>
+        </div>
+        <span class="hidden" id="ANSQ2">A</span>
+    </div>
+    <div class="container main_box">
+        <div class="container question">
+            3) Which NASA center is leading the PACE mission?
+        </div>
+        <div class="container options" style="color:rgb(3, 233, 241);">
+            <label for="Q3A"><div id="OPTQ3A" class="opt"><input type="radio" name="Q3" id="Q3A" value="A" onchange="fun(document.getElementById('OPTQ3A'),'A',document.getElementById('ANSQ3').textContent)"> Kennedy Space Center</div></label>
+            <label for="Q3B"><div id="OPTQ3B" class="opt"><input type="radio" name="Q3" id="Q3B" value="B" onchange="fun(document.getElementById('OPTQ3B'),'B',document.getElementById('ANSQ3').textContent)"> Goddard Space Flight Center</div></label>
+            <label for="Q3C"><div id="OPTQ3C" class="opt"><input type="radio" name="Q3" id="Q3C" value="C" onchange="fun(document.getElementById('OPTQ3C'),'C',document.getElementById('ANSQ3').textContent)"> Johnson Space Center</div></label>
+            <label for="Q3D"><div id="OPTQ3D" class="opt"><input type="radio" name="Q3" id="Q3D" value="D" onchange="fun(document.getElementById('OPTQ3D'),'D',document.getElementById('ANSQ3').textContent)"> Jet Propulsion Laboratory</div></label>
+        </div>
+        <span class="hidden" id="ANSQ3">B</span>
+    </div>
+    <div class="container main_box">
+        <div class="container question">
+            4) What type of data will PACE primarily collect?
+        </div>
+        <div class="container options" style="color:rgb(3, 233, 241);">
+            <label for="Q4A"><div id="OPTQ4A" class="opt"><input type="radio" name="Q4" id="Q4A" value="A" onchange="fun(document.getElementById('OPTQ4A'),'A',document.getElementById('ANSQ4').textContent)"> Atmospheric CO2 levels</div></label>
+            <label for="Q4B"><div id="OPTQ4B" class="opt"><input type="radio" name="Q4" id="Q4B" value="B" onchange="fun(document.getElementById('OPTQ4B'),'B',document.getElementById('ANSQ4').textContent)"> High-resolution ocean color data</div></label>
+            <label for="Q4C"><div id="OPTQ4C" class="opt"><input type="radio" name="Q4" id="Q4C" value="C" onchange="fun(document.getElementById('OPTQ4C'),'C',document.getElementById('ANSQ4').textContent)"> Earthquake patterns</div></label>
+            <label for="Q4D"><div id="OPTQ4D" class="opt"><input type="radio" name="Q4" id="Q4D" value="D" onchange="fun(document.getElementById('OPTQ4D'),'D',document.getElementById('ANSQ4').textContent)"> Solar radiation measurements</div></label>
+        </div>
+        <span class="hidden" id="ANSQ4">B</span>
+    </div>
+    <div class="container main_box">
+        <div class="container question">
+            5) What role does phytoplankton play in the PACE mission?
+        </div>
+        <div class="container options" style="color:rgb(3, 233, 241);">
+            <label for="Q5A"><div id="OPTQ5A" class="opt"><input type="radio" name="Q5" id="Q5A" value="A" onchange="fun(document.getElementById('OPTQ5A'),'A',document.getElementById('ANSQ5').textContent)"> It's the mission’s main spacecraft</div></label>
+            <label for="Q5B"><div id="OPTQ5B" class="opt"><input type="radio" name="Q5" id="Q5B" value="B" onchange="fun(document.getElementById('OPTQ5B'),'B',document.getElementById('ANSQ5').textContent)">  It helps monitor sea surface temperature</div></label>
+            <label for="Q5C"><div id="OPTQ5C" class="opt"><input type="radio" name="Q5" id="Q5C" value="C" onchange="fun(document.getElementById('OPTQ5C'),'C',document.getElementById('ANSQ5').textContent)"> It’s a key organism PACE will study to understand ocean ecosystems</div></label>
+            <label for="Q5D"><div id="OPTQ5D" class="opt"><input type="radio" name="Q5" id="Q5D" value="D" onchange="fun(document.getElementById('OPTQ5D'),'D',document.getElementById('ANSQ5').textContent)"> It tracks weather patterns</div></label>
+        </div>
+        <span class="hidden" id="ANSQ5">C</span>
+    </div>
+    <div class="container main_box">
+        <div class="container question">
+            6) How will PACE data help with natural disaster responses?
+        </div>
+        <div class="container options" style="color:rgb(3, 233, 241);">
+            <label for="Q6A"><div id="OPTQ6A" class="opt"><input type="radio" name="Q6" id="Q6A" value="A" onchange="fun(document.getElementById('OPTQ6A'),'A',document.getElementById('ANSQ6').textContent)"> By predicting volcanic eruptions</div></label>
+            <label for="Q6B"><div id="OPTQ6B" class="opt"><input type="radio" name="Q6" id="Q6B" value="B" onchange="fun(document.getElementById('OPTQ6B'),'B',document.getElementById('ANSQ6').textContent)"> By monitoring water resources and air quality during events like floods and wildfires</div></label>
+            <label for="Q6C"><div id="OPTQ6C" class="opt"><input type="radio" name="Q6" id="Q6C" value="C" onchange="fun(document.getElementById('OPTQ6C'),'C',document.getElementById('ANSQ6').textContent)"> By tracking hurricane movement</div></label>
+            <label for="Q6D"><div id="OPTQ6D" class="opt"><input type="radio" name="Q6" id="Q6D" value="D" onchange="fun(document.getElementById('OPTQ6D'),'D',document.getElementById('ANSQ6').textContent)"> By studying tectonic plate shifts</div></label>
+        </div>
+        <span class="hidden" id="ANSQ6">B</span>
+    </div>
+    <div class="container main_box">
+        <div class="container question">
+            7) What is a major application of PACE's ocean color data?
+        </div>
+        <div class="container options" style="color:rgb(3, 233, 241);">
+            <label for="Q7A"><div id="OPTQ7A" class="opt"><input type="radio" name="Q7" id="Q7A" value="A" onchange="fun(document.getElementById('OPTQ7A'),'A',document.getElementById('ANSQ7').textContent)"> Monitoring harmful algal blooms and water pollution</div></label>
+            <label for="Q7B"><div id="OPTQ7B" class="opt"><input type="radio" name="Q7" id="Q7B" value="B" onchange="fun(document.getElementById('OPTQ7B'),'B',document.getElementById('ANSQ7').textContent)"> Predicting tides</div></label>
+            <label for="Q7C"><div id="OPTQ7C" class="opt"><input type="radio" name="Q7" id="Q7C" value="C" onchange="fun(document.getElementById('OPTQ7C'),'C',document.getElementById('ANSQ7').textContent)"> Mapping the sea floor</div></label>
+            <label for="Q7D"><div id="OPTQ7D" class="opt"><input type="radio" name="Q7" id="Q7D" value="D" onchange="fun(document.getElementById('OPTQ7D'),'D',document.getElementById('ANSQ7').textContent)"> Studying undersea volcanic activity</div></label>
+        </div>
+        <span class="hidden" id="ANSQ7">A</span>
+    </div>
+    <div class="container main_box">
+        <div class="container question">
+            8) How will PACE's data be used in policy and management decisions?
+        </div>
+        <div class="container options" style="color:rgb(3, 233, 241);">
+            <label for="Q8A"><div id="OPTQ8A" class="opt"><input type="radio" name="Q8" id="Q8A" value="A" onchange="fun(document.getElementById('OPTQ8A'),'A',document.getElementById('ANSQ8').textContent)"> To inform space exploration</div></label>
+            <label for="Q8B"><div id="OPTQ8B" class="opt"><input type="radio" name="Q8" id="Q8B" value="B" onchange="fun(document.getElementById('OPTQ8B'),'B',document.getElementById('ANSQ8').textContent)"> To track wildlife migrations</div></label>
+            <label for="Q8C"><div id="OPTQ8C" class="opt"><input type="radio" name="Q8" id="Q8C" value="C" onchange="fun(document.getElementById('OPTQ8C'),'C',document.getElementById('ANSQ8').textContent)"> To control urban development</div></label>
+            <label for="Q8D"><div id="OPTQ8D" class="opt"><input type="radio" name="Q8" id="Q8D" value="D" onchange="fun(document.getElementById('OPTQ8D'),'D',document.getElementById('ANSQ8').textContent)"> To support decisions on ocean and air quality management</div></label>
+        </div>
+        <span class="hidden" id="ANSQ8">D</span>
+    </div>
+    <div class="container main_box">
+        <div class="container question">
+            9) What type of disasters will PACE help monitor and respond to?
+        </div>
+        <div class="container options" style="color:rgb(3, 233, 241);">
+            <label for="Q9A"><div id="OPTQ9A" class="opt"><input type="radio" name="Q9" id="Q9A" value="A" onchange="fun(document.getElementById('OPTQ9A'),'A',document.getElementById('ANSQ9').textContent)"> Earthquakes</div></label>
+            <label for="Q9B"><div id="OPTQ9B" class="opt"><input type="radio" name="Q9" id="Q9B" value="B" onchange="fun(document.getElementById('OPTQ9B'),'B',document.getElementById('ANSQ9').textContent)"> Floods, volcanic eruptions, and wildfires</div></label>
+            <label for="Q9C"><div id="OPTQ9C" class="opt"><input type="radio" name="Q9" id="Q9C" value="C" onchange="fun(document.getElementById('OPTQ9C'),'C',document.getElementById('ANSQ9').textContent)"> Tsunamis</div></label>
+            <label for="Q9D"><div id="OPTQ9D" class="opt"><input type="radio" name="Q9" id="Q9D" value="D" onchange="fun(document.getElementById('OPTQ9D'),'D',document.getElementById('ANSQ9').textContent)"> Tornadoes</div></label>
+        </div>
+        <span class="hidden" id="ANSQ9">B</span>
+    </div>
+    <div class="container main_box">
+        <div class="container question">
+            10) What type of data is PACE primarily designed to collect?
+        </div>
+        <div class="container options" style="color:rgb(3, 233, 241);">
+            <label for="Q10A"><div id="OPTQ10A" class="opt"><input type="radio" name="Q10" id="Q10A" value="A" onchange="fun(document.getElementById('OPTQ10A'),'A',document.getElementById('ANSQ10').textContent)"> Space weather data</div></label>
+            <label for="Q10B"><div id="OPTQ10B" class="opt"><input type="radio" name="Q10" id="Q10B" value="B" onchange="fun(document.getElementById('OPTQ10B'),'B',document.getElementById('ANSQ10').textContent)"> Atmospheric CO2 levels</div></label>
+            <label for="Q10C"><div id="OPTQ10C" class="opt"><input type="radio" name="Q10" id="Q10C" value="C" onchange="fun(document.getElementById('OPTQ10C'),'C',document.getElementById('ANSQ10').textContent)"> Earthquake activity data</div></label>
+            <label for="Q10D"><div id="OPTQ10D" class="opt"><input type="radio" name="Q10" id="Q10D" value="D" onchange="fun(document.getElementById('OPTQ10D'),'D',document.getElementById('ANSQ10').textContent)"> Ocean color, aerosol, and cloud data</div></label>
+        </div>
+        <span class="hidden" id="ANSQ10">D</span>
+    </div>
+    <div class="container main_box">
+        <div class="container question">
+            11) How will PACE data contribute to air quality monitoring?
+        </div>
+        <div class="container options" style="color:rgb(3, 233, 241);">
+            <label for="Q11A"><div id="OPTQ11A" class="opt"><input type="radio" name="Q11" id="Q11A" value="A" onchange="fun(document.getElementById('OPTQ11A'),'A',document.getElementById('ANSQ11').textContent)"> By measuring CO2 concentrations in the atmosphere</div></label>
+            <label for="Q11B"><div id="OPTQ11B" class="opt"><input type="radio" name="Q11" id="Q11B" value="B" onchange="fun(document.getElementById('OPTQ11B'),'B',document.getElementById('ANSQ11').textContent)"> By observing aerosol particles that affect air quality and climate</div></label>
+            <label for="Q11C"><div id="OPTQ11C" class="opt"><input type="radio" name="Q11" id="Q11C" value="C" onchange="fun(document.getElementById('OPTQ11C'),'C',document.getElementById('ANSQ11').textContent)"> By tracking ozone depletion</div></label>
+            <label for="Q11D"><div id="OPTQ11D" class="opt"><input type="radio" name="Q11" id="Q11D" value="D" onchange="fun(document.getElementById('OPTQ11D'),'D',document.getElementById('ANSQ11').textContent)"> By forecasting weather patterns</div></label>
+        </div>
+        <span class="hidden" id="ANSQ11">B</span>
+    </div>
+    <div class="container main_box">
+        <div class="container question">
+            12) What is the significance of aerosols in PACE's data collection?
+        </div>
+        <div class="container options" style="color:rgb(3, 233, 241);">
+            <label for="Q12A"><div id="OPTQ12A" class="opt"><input type="radio" name="Q12" id="Q12A" value="A" onchange="fun(document.getElementById('OPTQ12A'),'A',document.getElementById('ANSQ12').textContent)"> Aerosols block solar flares from reaching Earth</div></label>
+            <label for="Q12B"><div id="OPTQ12B" class="opt"><input type="radio" name="Q12" id="Q12B" value="B" onchange="fun(document.getElementById('OPTQ12B'),'B',document.getElementById('ANSQ12').textContent)"> Aerosols influence Earth's climate by interacting with sunlight and clouds</div></label>
+            <label for="Q12C"><div id="OPTQ12C" class="opt"><input type="radio" name="Q12" id="Q12C" value="C" onchange="fun(document.getElementById('OPTQ12C'),'C',document.getElementById('ANSQ12').textContent)"> Aerosols are the primary cause of earthquakes</div></label>
+            <label for="Q12D"><div id="OPTQ12D" class="opt"><input type="radio" name="Q12" id="Q12D" value="D" onchange="fun(document.getElementById('OPTQ12D'),'D',document.getElementById('ANSQ12').textContent)"> Aerosols only affect local air pollution, not the global environment</div></label>
+        </div>
+        <span class="hidden" id="ANSQ12">C</span>
+    </div>
+    <div class="container main_box">
+        <div class="container question">
+            13) What role do phytoplankton play in PACE data analysis?
+        </div>
+        <div class="container options" style="color:rgb(3, 233, 241);">
+            <label for="Q13A"><div id="OPTQ13A" class="opt"><input type="radio" name="Q13" id="Q13A" value="A" onchange="fun(document.getElementById('OPTQ13A'),'A',document.getElementById('ANSQ13').textContent)"> They are used to measure salinity levels</div></label>
+            <label for="Q13B"><div id="OPTQ13B" class="opt"><input type="radio" name="Q13" id="Q13B" value="B" onchange="fun(document.getElementById('OPTQ13B'),'B',document.getElementById('ANSQ13').textContent)"> They are studied to predict tectonic shifts</div></label>
+            <label for="Q13C"><div id="OPTQ13C" class="opt"><input type="radio" name="Q13" id="Q13C" value="C" onchange="fun(document.getElementById('OPTQ13C'),'C',document.getElementById('ANSQ13').textContent)"> They serve as indicators of ocean ecosystem health, being central to the food chain and oxygen production</div></label>
+            <label for="Q13D"><div id="OPTQ13D" class="opt"><input type="radio" name="Q13" id="Q13D" value="D" onchange="fun(document.getElementById('OPTQ13D'),'D',document.getElementById('ANSQ13').textContent)"> They are used to calculate atmospheric pressure</div></label>
+        </div>
+        <span class="hidden" id="ANSQ13">C</span>
+    </div>
+
+
+    <script>
+        function fun(id,user_ans,right_ans){
+            console.log(user_ans)
+            console.log(right_ans)
+            if(user_ans==right_ans){
+                id.style="background-color:green;color:white;";
+            }
+            else{
+                id.style="background-color:red;color:white;";
+            }
+        }
+    </script>    
+</body>
+</html>
